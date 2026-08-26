@@ -1,0 +1,142 @@
+{
+  "weddingEvents": [
+    {
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.8402170362376!2d72.8308413!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sTaj%20Mahal%20Tower%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
+      "venueName": "At Our residence ",
+      "mapDirectionsUrl": "https://maps.app.goo.gl/XwuHKTXXTYVbVV8g9?g_st=ac",
+      "thumbnailUrl": "https://www.image2url.com/r2/default/videos/1787591383645-a6292e47-3d21-4503-96d7-dd0797ba9526.mp4",
+      "venueAddress": "Full Address- 356F, Phase 7, Swarnjayanti Vihar, kanpur, 2D, KDA Colony, Kanpur, Uttar Pradesh - 208011",
+      "eventName": "Haldi Ceremony ",
+      "time": "2026-11-16"
+    },
+    {
+      "eventName": "Tilak Ceremony",
+      "venueAddress": "Full Address- 356F, Phase 7, Swarnjayanti Vihar, kanpur, 2D, KDA Colony, Kanpur, Uttar Pradesh - 208011",
+      "venueName": "At Our residence",
+      "mapEmbedUrl": "https://maps.app.goo.gl/92fTR9Dj21kJ1dHWA?g_st=ac!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sTaj%20Mahal%20Tower%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
+      "thumbnailUrl": "https://www.image2url.com/r2/default/videos/1787655269534-5f083ff3-eb8c-45cd-8a29-833e5a63baaa.mp4",
+      "time": "2026-11-18",
+      "mapDirectionsUrl": "https://maps.app.goo.gl/92fTR9Dj21kJ1dHWA?g_st=ac"
+    },
+    {
+      "time": "2026-11-19",
+      "eventName": "Mehndi Ceremony",
+      "thumbnailUrl": "https://www.image2url.com/r2/default/videos/1787593497725-a6d4bf03-12db-41e9-b01a-08a744c48d11.mp4",
+      "mapDirectionsUrl": "https://maps.app.goo.gl/XwuHKTXXTYVbVV8g9?g_st=ac",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.8402170362376!2d72.8308413!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sTaj%20Mahal%20Tower%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
+      "venueName": "At Our residence",
+      "venueAddress": "Full Address- 356F, Phase 7, Swarnjayanti Vihar, kanpur, 2D, KDA Colony, Kanpur, Uttar Pradesh - 208011"
+    },
+    {
+      "thumbnailUrl": "https://www.image2url.com/r2/default/videos/1787593662183-9f53e455-7fc7-44b1-8733-fe6eee85c6a2.mp4",
+      "time": "2026-11-20",
+      "venueName": "GOLDEN PALACE ",
+      "eventName": "Wedding Ceremony ",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.8402170362376!2d72.8308413!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sTaj%20Mahal%20Tower%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
+      "venueAddress": "Full Venue Address- 122, K-8, Sarojini Nagar, Darshan Purwa, Kanpur, Uttar Pradesh 208012",
+      "mapDirectionsUrl": "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x399c4789cede651b:0x372b00d1daa1d1c7?entry=s&sa=X&ved=2ahUKEwiH1vuAl7mWAxXCi-EIHXn0KfgQ4kB6BAgFEAA&hl=en"
+    }
+  ],
+  "familyDetails": {
+    "message": "With the divine blessings of Lord Ganesha and our ancestors, we cordially invite you and your family to grace our Engagement Ceremony.",
+    "welcomingText": "Warmly Welcomed By:",
+    "names": [
+      "Singhal Family",
+      "Sharma Family",
+      "All Relatives and Friends"
+    ]
+  },
+  "openingBackgroundImageUrl": "https://i.ibb.co/F4c3Rn4X/file-000000008b048211af9a46c0a2523455.png",
+  "thankYouImageUrl": "fsdb://fsdb_1783188400631_xd4dpz9",
+  "gallerySubtitle": "Glimpses of Our Journey",
+  "openingVideoUrl": "https://www.image2url.com/r2/default/videos/1787736032087-bb97a04f-2775-4ab2-8812-d6b91ac9f91d.mp4",
+  "weddingDate": "2026-11-20T12:00",
+  "timeline": [
+    {
+      "id": "first_met",
+      "title": "How We Met",
+      "date": "May 14, 2022",
+      "description": "It started with a simple 'Hello' at a common friend's birthday party. We bonded over our shared love for street food and old Bollywood classics.",
+      "icon": "coffee"
+    },
+    {
+      "id": "first_date",
+      "description": "A magical evening by the Marine Drive. Hours felt like minutes as we talked about our dreams, ambitions, and families.",
+      "title": "Our First Date",
+      "date": "June 02, 2022",
+      "icon": "heart"
+    },
+    {
+      "date": "August 15, 2025",
+      "title": "The Proposal",
+      "icon": "ring",
+      "description": "Under a canopy of stars in Udaipur, Aarav got down on one knee. It was a resounding 'YES!' followed by tears of joy.",
+      "id": "proposal"
+    }
+  ],
+  "heroTagline": "We Are Engaged",
+  "groom": {
+    "motherName": "Asha sharma",
+    "fatherName": "Devendra Kumar",
+    "imageUrl": "fsdb://fsdb_1783188128812_loip4lg",
+    "name": "Trishi Bhatt",
+    "bio": "A visionary tech leader with a warm heart, Aarav is known for his humility and wisdom. He enjoys photography, travelling, and is the proud son of the Singhal family."
+  },
+  "openingSealImageUrl": "https://www.image2url.com/r2/default/images/1783181278121-9f63126d-669b-46e3-920c-2ea585dc28d7.png",
+  "displayDate": "12th December 2026",
+  "galleryImages": [
+    {
+      "caption": "Eternal Togetherness",
+      "url": "fsdb://fsdb_1783188196638_9hxd9t2"
+    },
+    {
+      "caption": "Hand in Hand",
+      "url": "fsdb://fsdb_1783188200036_uo10e9q"
+    },
+    {
+      "caption": "Those eye contact 😍",
+      "url": "fsdb://fsdb_1783188208912_p0di8st"
+    },
+    {
+      "caption": "The Promise",
+      "url": "fsdb://fsdb_1783188238840_l9yo7wq"
+    }
+  ],
+  "hashtag": "#AaravWedsAnanya",
+  "bride": {
+    "fatherName": "Pradeep sharma",
+    "motherName": "Rekha sharma",
+    "name": "Hitakshi Sharma",
+    "imageUrl": "fsdb://fsdb_1783188141625_920kwyo",
+    "bio": "A beautiful soul, traditional yet modern, Ananya brings joy and light to everyone around her. She loves classical art, painting, and is the beloved daughter of the Sharma family."
+  },
+  "welcomeMessage": {
+    "text": "Because you have played a very special role in our lives, we would love for you to join us as we embark on this beautiful adventure together. Together with our families, we invite you to share our joy and laughter at our Engagement Ceremony.",
+    "title": "Two Hearts, One Journey",
+    "subtitle": "We invite you to celebrate our love"
+  },
+  "heroImageUrl": "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=100&w=3840&auto=format&fit=crop",
+  "musicUrl": "https://www.image2url.com/r2/default/audio/1787668714348-1be87241-d799-46f1-be7c-f6a4a16b3b1c.mp3",
+  "heroSettings": {
+    "bgVideoUrl": "https://www.image2url.com/r2/default/videos/1787648242785-df6b2cb3-3bd5-4ed7-bfc7-405356cf354c.mp4",
+    "shloka": "॥ श्री गणेशाय नमः ॥\nवक्रतुण्ड महाकाय सूर्यकोटि समप्रभ\nनिर्विघ्नं कुरु मे देव\nसर्वकार्येषु सर्वदा ॥",
+    "showPetals": true,
+    "ganeshaIconUrl": "https://i.ibb.co/C5HDWDcL/1000012057-removebg-preview.png",
+    "brideParents": "Daughter of Mrs. Rekha Sharma & Mr. Pradeep sharma ",
+    "introText": "With the blessings of Shri Ganesh and our beloved families, we joyfully invite you to celebrate the union of",
+    "groomParents": "Son of Mrs. Asha sharma & Mr. Devendra Kumar "
+  },
+  "youtubeEmbedUrl": "",
+  "engagementDetails": {
+    "time": "07:00 PM onwards",
+    "venueAddress": "VIP Road, Colaba, Mumbai, MH - 400001",
+    "mapDirectionsUrl": "https://maps.google.com/?q=Taj+Mahal+Tower+Mumbai",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.8402170362376!2d72.8308413!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sTaj%20Mahal%20Tower%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin",
+    "venueName": "The Sapphire Crystal Hall, Taj Palace Hotel"
+  },
+  "envelopeIconUrl": "fsdb://fsdb_1783192687294_4mhgeux",
+  "socialLinks": {
+    "instagram": "https://instagram.com",
+    "facebook": "https://facebook.com"
+  }
+}
