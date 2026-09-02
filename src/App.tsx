@@ -35,6 +35,7 @@ import { FallingFlowers } from "./components/FallingFlowers";
 import { FallingPetals } from "./components/FallingPetals";
 import { SectionSeparator } from "./components/SectionSeparator";
 import { Countdown } from "./components/Countdown";
+import { Preloader } from "./components/Preloader";
 import confetti from "canvas-confetti";
 
 import { saveConfigToDb, addRsvpToDb, fetchConfigFromDb } from "./lib/db";
@@ -80,6 +81,9 @@ export default function App() {
     return defaultWeddingConfig;
   });
 
+  const [isPreloading, setIsPreloading] = useState(true);
+  const [isConfigLoaded, setIsConfigLoaded] = useState(false);
+
   useEffect(() => {
     // 1. Fetch permanent config from backend server on mount
     fetchConfigFromDb().then((serverConfig) => {
@@ -94,7 +98,12 @@ export default function App() {
           bride: { ...defaultWeddingConfig.bride, ...(serverConfig.bride || {}) },
         });
       }
+      setIsConfigLoaded(true);
     });
+    
+    // Fallback if DB fetch takes too long
+    const timeoutId = setTimeout(() => setIsConfigLoaded(true), 3500);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {
@@ -470,11 +479,20 @@ export default function App() {
   return (
     <div className="min-h-[100dvh] bg-[#FFF8F3] bg-gradient-to-b from-[#FFF8F3] to-[#ffece0] font-sans relative text-gray-800">
       
+      <AnimatePresence>
+        {isPreloading && (
+          <Preloader 
+            config={isConfigLoaded ? config : null} 
+            onComplete={() => setIsPreloading(false)} 
+          />
+        )}
+      </AnimatePresence>
+
       <audio ref={audioRef} src={actualMusicUrl || undefined} loop preload="auto" playsInline className="hidden" onError={(e) => console.warn("Audio could not load.")} onPlay={() => console.log("Audio playing!")} />
       
       {/* 1. OVERLAY ENVELOPE COVER (Opening Screen) */}
       <AnimatePresence>
-        {!isOpened && (
+        {(!isOpened && !isPreloading) && (
           <EnvelopeCover
             key="envelope"
             isOpen={isOpened}
