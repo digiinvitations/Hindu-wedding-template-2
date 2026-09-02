@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { WeddingConfig } from '../weddingConfig';
 import { fetchFromFsdb } from '../lib/fsdb';
-import { Flower2, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 interface PreloaderProps {
   config: WeddingConfig | null;
@@ -107,16 +107,14 @@ export function Preloader({ config, onComplete }: PreloaderProps) {
       transition={{ duration: 0.8 }}
       className="fixed inset-0 z-[9999] bg-[#FFF9F3] flex flex-col items-center justify-center p-6"
     >
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        className="mb-8 text-[#C9A45C]"
+      <motion.h2 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="font-display text-2xl md:text-3xl text-[#84571f] mb-6 tracking-wide text-center uppercase"
       >
-        <Flower2 size={48} />
-      </motion.div>
-      <h2 className="font-display text-2xl md:text-3xl text-[#84571f] mb-4 text-center">
         Loading Your Invitation
-      </h2>
+      </motion.h2>
       
       {!config ? (
         <div className="flex items-center gap-2 text-[#a77528]">
