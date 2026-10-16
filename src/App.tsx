@@ -21,7 +21,8 @@ import {
   Instagram,
   Facebook,
   Maximize2,
-  Flower2
+  Flower2,
+  Pencil
 } from "lucide-react";
 
 import { weddingConfig as defaultWeddingConfig, WeddingConfig } from "./weddingConfig";
@@ -36,6 +37,7 @@ import { FallingPetals } from "./components/FallingPetals";
 import { SectionSeparator } from "./components/SectionSeparator";
 import { Countdown } from "./components/Countdown";
 import { Preloader } from "./components/Preloader";
+import { EditInvitationModal } from "./components/EditInvitationModal";
 import confetti from "canvas-confetti";
 
 import { saveConfigToDb, addRsvpToDb, fetchConfigFromDb } from "./lib/db";
@@ -273,6 +275,30 @@ export default function App() {
   
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+
+  // Pause background music helper
+  const pauseMusic = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    setMusicPlaying(false);
+  };
+
+  // Automatically pause music if user exits the tab, switches apps, or page is hidden
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        pauseMusic();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handleVisibilityChange);
+    };
+  }, []);
 
   // Handle Audio Player
   useEffect(() => {
@@ -835,7 +861,8 @@ export default function App() {
                         href={event.mapDirectionsUrl || event.mapEmbedUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex flex-row items-center gap-2 bg-[#B94E2F] text-white px-6 py-2.5 rounded-full font-sans text-[10px] uppercase tracking-[0.2em] hover:bg-[#8F3B22] transition-colors shadow-md"
+                        onClick={pauseMusic}
+                        className="inline-flex flex-row items-center gap-2 bg-[#B94E2F] text-white px-6 py-2.5 rounded-full font-sans text-[10px] uppercase tracking-[0.2em] hover:bg-[#8F3B22] transition-colors shadow-md cursor-pointer"
                       >
                         <MapPin size={12} />
                         VIEW ON MAPS
@@ -918,6 +945,29 @@ export default function App() {
       </div>
 
       {/* 13. FLOATING BUTTONS */}
+      {/* Floating "Edit Your Invitation" Button (Bottom Left) - visible ONLY on website after opening */}
+      {isOpened && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="fixed bottom-6 left-4 sm:left-6 z-40"
+        >
+          <button
+            onClick={() => setShowEditModal(true)}
+            className="group flex items-center gap-2 h-9 sm:h-10 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#641D2E]/95 hover:bg-[#85253C] text-white border border-[#dec47f]/70 shadow-[0_4px_16px_rgba(100,29,46,0.35)] hover:shadow-[0_6px_20px_rgba(100,29,46,0.5)] cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 backdrop-blur-md"
+            title="Edit Your Invitation Details"
+          >
+            <div className="w-5 h-5 rounded-full bg-[#dec47f]/25 border border-[#dec47f]/60 flex items-center justify-center text-[#dec47f] shrink-0">
+              <Pencil size={11} className="stroke-[2.5]" />
+            </div>
+            <span className="font-sans font-semibold text-xs tracking-wide text-[#F8E9E2]">
+              Edit Your Invitation
+            </span>
+          </button>
+        </motion.div>
+      )}
+
       {/* Music Floating Toggle (Bottom Right) */}
       {isOpened && (
         <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3 group">
@@ -960,6 +1010,14 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Edit Your Invitation Modal & WhatsApp Redirection */}
+      <EditInvitationModal
+        isOpen={showEditModal}
+        onClose={() => setShowEditModal(false)}
+        config={config}
+        onPauseMusic={pauseMusic}
+      />
 
       {/* RSVP Confirmation Modal */}
       <RSVPModal
